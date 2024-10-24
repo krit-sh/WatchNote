@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Timestamps</title>
+<head>
+    <title>YouTube Timestamp Saver</title>
     <style>
-      body { font-family: Arial, sans-serif; }
-      button { margin: 5px 0; }
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+        }
+        .timestamp-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .timestamp-item button {
+            margin-right: 5px;
+        }
+        #clearButton {
+            margin-top: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h3>Saved Timestamps</h3>
     <div id="timestampList"></div>
-    <button id="clearButton" style="margin-top: 10px; background-color: red; color: white;">Clear All Timestamps</button>
-
+    <button id="clearButton">Clear All Timestamps</button>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>

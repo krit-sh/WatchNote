@@ -1,23 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "YouTube Timestamp Saver",
-    "version": "1.0",
-    "description": "Save and jump to YouTube timestamps",
-    "permissions": [
-      "tabs",
-      "storage"
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://www.youtube.com/*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "YouTube Timestamp Saver",
+  "version": "1.2",
+  "description": "Save and jump to YouTube timestamps with notes",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
